@@ -1,38 +1,97 @@
-# sv
+# Drawing Application
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A real-time (someday collaborative) drawing application built with SvelteKit and TypeScript. Features include freehand drawing, shape creation, and image manipulation.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Freehand drawing with adjustable brush sizes
+- Shape tools (rectangle, circle, line)
+- Shape manipulation (resize, rotate, move)
+- Undo/redo functionality
+- Eraser tool
+- Real-time collaboration capabilities
+- Local storage for saving drawings
 
+## Technologies
+
+- SvelteKit
+- TypeScript
+- HTML5 Canvas
+- Tailwind CSS
+
+## Setup
+
+1. Clone the repository:
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+git clone https://github.com/yourusername/drawing-app.git
+cd drawing-app
 ```
 
-## Developing
+2. Install dependencies:
+```bash
+npm install
+```
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
+3. Start development server:
 ```bash
 npm run dev
+```
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+## Project Structure
+
+```
+src/
+├── lib/
+│   ├── components/
+│   │   ├── canvas/          # Canvas-related components
+│   │   └── ui/              # Reusable UI components
+│   ├── stores/              # State management
+│   ├── services/            # Canvas and storage services
+│   ├── types/               # TypeScript definitions
+│   └── utils/               # Helper functions
+└── routes/                  # SvelteKit routes
+```
+
+## Usage
+
+### Drawing Tools
+- Click and drag to draw freehand
+- Select shape tools to create geometric shapes
+- Use eraser tool to remove content
+- Adjust brush size with the slider
+
+### Shape Manipulation
+- Select shapes to move, resize, or rotate
+- Use corner handles to resize
+- Use top handle to rotate
+- Drag shape to move
+
+### History
+- Undo: Revert last action
+- Redo: Restore previously undone action
+
+## Architecture
+
+The application uses:
+- Store-based state management
+- Service-oriented architecture for canvas operations and storage
+- Component composition for UI elements
+- Type-safe development with TypeScript
+
+## Testing
+
+Run tests with:
+```bash
+npm test
 ```
 
 ## Building
 
-To create a production version of your app:
-
+Create production build:
 ```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+## License
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+MIT
