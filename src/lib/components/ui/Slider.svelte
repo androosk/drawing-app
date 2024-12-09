@@ -1,0 +1,1 @@
+<!-- TODO create a standardized slider that takes in props and can be used anywhere we need it -->
