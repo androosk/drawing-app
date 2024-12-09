@@ -1,6 +1,6 @@
 # Drawing Application
 
-A real-time (someday collaborative) drawing application built with SvelteKit and TypeScript. Features include freehand drawing, shape creation, and image manipulation.
+A real-time (someday collaborative) drawing application built with SvelteKit and TypeScript. Features include freehand drawing, shape creation, and shape manipulation.
 
 ## Features
 
