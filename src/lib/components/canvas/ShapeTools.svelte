@@ -1,30 +1,3 @@
-<!-- <script lang="ts">
-    import { drawingStore } from '$lib/stores/drawingStore';
-    
-    const tool = drawingStore.tool;
-    $: currentTool = $tool;
-
-    const shapeTools = [
-        { type: 'rectangle', label: 'Rectangle' },
-        { type: 'circle', label: 'Circle' },
-        { type: 'line', label: 'Line' }
-    ] as const;
-</script>
-
-<div class="flex gap-2">
-    {#each shapeTools as shape}
-        <button
-            on:click={() => drawingStore.updateTool({ ...currentTool, type: shape.type })}
-            class={`px-4 py-2 rounded ${
-                currentTool.type === shape.type
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-gray-200 hover:bg-gray-300'
-            }`}
-        >
-            {shape.label}
-        </button>
-    {/each}
-</div> -->
 <script lang="ts">
     import { drawingStore } from '$lib/stores/drawingStore';
     import { Square, Circle, MoveHorizontal } from 'lucide-svelte';
